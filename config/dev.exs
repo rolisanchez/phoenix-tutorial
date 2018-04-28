@@ -49,10 +49,11 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
+# import_config "dev.secret.exs"
 config :catcasts, Catcasts.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "",
   database: "catcasts_dev",
   hostname: "localhost",
   pool_size: 10
