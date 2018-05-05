@@ -28,5 +28,6 @@ defmodule CatcastsWeb.Router do
     pipe_through :browser
 
     get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :new
   end
 end
