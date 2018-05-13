@@ -34,3 +34,13 @@
 }
 
 .callout:empty { display: none; }
+
+/* Video index */
+
+.video-index {
+  padding-top: 10px;
+}
+.duration-text {
+  font-size: .65em;
+  color: #555;
+}
