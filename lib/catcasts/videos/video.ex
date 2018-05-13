@@ -1,7 +1,10 @@
 defmodule Catcasts.Videos.Video do
   use Ecto.Schema
   import Ecto.Changeset
+  alias Catcasts.Videos.Video
+  alias Catcasts.User
 
+  use Rummage.Ecto
 
   schema "videos" do
     field :duration, :string
@@ -9,7 +12,7 @@ defmodule Catcasts.Videos.Video do
     field :title, :string
     field :video_id, :string, unique: true
     field :view_count, :integer
-    belongs_to :user, User 
+    belongs_to :user, User
 
     timestamps()
   end

@@ -17,6 +17,11 @@ config :catcasts, CatcastsWeb.Endpoint,
   pubsub: [name: Catcasts.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+# Configure Rummage Phoenix
+config :rummage_ecto, Rummage.Ecto,
+ default_repo: Catcasts.Repo,
+ default_per_page: 5
+ 
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
